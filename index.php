@@ -47,16 +47,16 @@
     <div class="content">
       <div class="container-fluid">
         <div class="row">
-          <div class="col-md-6">
+          <div class="col-md-3">
             <img src="https://placekitten.com/g/250/250" alt="">
           </div>
-          <div class="col-md-6">
+          <div class="col-md-3">
             <img src="https://placekitten.com/g/250/250" alt="">
           </div>
-          <div class="col-md-6">
+          <div class="col-md-3">
             <img src="https://placekitten.com/g/250/250" alt="">
           </div>
-          <div class="col-md-6">
+          <div class="col-md-3">
             <img src="https://placekitten.com/g/250/250" alt="">
           </div>
         </div>
