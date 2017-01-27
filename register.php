@@ -34,10 +34,10 @@
                       <li>
                        <a href="#">Cart</a>
                      </li>
-                     <li class="active">
+                     <li>
                       <a href="login.php">Login</a>
                     </li>
-                    <li>
+                    <li class="active">
                      <a href="register.php">Register</a>
                    </li>
                 </ul>
@@ -51,13 +51,18 @@
 
         <!-- Login Form -->
         <div class="row">
-          <h1>Login</h1>
+          <h1>Register</h1>
           <div class="col-lg-12">
           <form method="post" action="">
               <!-- Username input-->
               <div class="form-group">
                   <label class="control-label" for="username">Username</label>
                   <input id="username" name="username" type="text" placeholder="Username" class="form-control" required="">
+              </div>
+              <!-- Name input-->
+              <div class="form-group">
+                  <label class="control-label" for="name">Name</label>
+                  <input id="name" name="name" type="name" placeholder="Name" class="form-control" required="">
               </div>
               <!-- Password input-->
               <div class="form-group">
@@ -66,10 +71,10 @@
               </div>
               <!-- Button -->
               <div class="form-group">
-                  <button id="login" name="login" class="btn">Login</button>
+                  <button id="register" name="register" class="btn">Register</button>
               </div>
             </form>
-            <a href="register.php">Don't have an account?</a>
+            <a href="login.php">Have an account?</a>
           </div>
         </div>
 

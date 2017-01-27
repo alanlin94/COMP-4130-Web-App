@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Björn Sture Store</title>
+    <title>Björn Sture Art Store</title>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
@@ -19,67 +19,94 @@
   </head>
   <body>
 
+    <!-- SIDEBAR NAV -->
     <div class="nav-side-menu">
         <div class="brand"><a href="index.php"><img src="img/logo.svg" alt=""></a></div>
         <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
-
             <div class="menu-list">
-
                 <ul id="menu-content" class="menu-content collapse out">
                     <li class="active">
-                      <a href="#">Work</a>
+                      <a href="index.php">Work</a>
                     </li>
                      <li>
                       <a href="#">Profile</a>
-                      </li>
-                      <li>
-                       <a href="#">Cart</a>
+                    </li>
+                    <li>
+                      <a href="#">Cart</a>
                      </li>
                      <li>
                       <a href="login.php">Login</a>
                     </li>
                     <li>
-                     <a href="#">Logout</a>
+                     <a href="register.php">Register</a>
                    </li>
                 </ul>
          </div>
     </div>
+    <!-- SIDEBAR NAV END-->
 
+    <!-- CONTENT -->
     <div class="content">
       <div class="container-fluid">
 
-        <div class="row mg">
-          <div class="col-lg-6 col-md-6 col-xs-6">
-            <img class="img-responsive" src="https://placekitten.com/g/250/250" alt=""/>
+          <div class="row">
+            <div class="col-lg-12">
+              <img class="hero-img img-responsive" src="img/heroimg.png" alt="">
+            </div>
           </div>
-          <div class="col-lg-6 col-md-6 col-xs-6">
-            <img class="img-responsive" src="https://placekitten.com/g/250/250" alt=""/>
-          </div>
-          <div class="col-lg-6 col-md-6 col-xs-6">
-            <img class="img-responsive" src="https://placekitten.com/g/250/250" alt=""/>
-          </div>
-          <div class="col-lg-6 col-md-6 col-xs-6">
-            <img class="img-responsive" src="https://placekitten.com/g/250/250" alt=""/>
-          </div>
-        </div>
 
-        <div class="row">
-          <div class="col-lg-6 col-md-6 col-xs-6">
-            <img class="img-responsive" src="https://placekitten.com/g/250/250" alt=""/>
+          <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+              <div class="productBG">
+                <img class="img-responsive" src="https://placekitten.com/g/400/400" alt="">
+                <p>Price: $10,000</p>
+                <button id="addtocart" name="addtocart" class="btn">Add to cart</button>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+              <div class="productBG">
+                <img class="img-responsive" src="https://placekitten.com/g/400/400" alt="">
+                <p>Price: $10,000</p>
+                <button id="addtocart" name="addtocart" class="btn">Add to cart</button>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+              <div class="productBG">
+                <img class="img-responsive" src="https://placekitten.com/g/400/400" alt="">
+                <p>Price: $10,000</p>
+                <button id="addtocart" name="addtocart" class="btn">Add to cart</button>
+              </div>
+            </div>
           </div>
-          <div class="col-lg-6 col-md-6 col-xs-6">
-            <img class="img-responsive" src="https://placekitten.com/g/250/250" alt=""/>
-          </div>
-          <div class="col-lg-6 col-md-6 col-xs-6">
-            <img class="img-responsive" src="https://placekitten.com/g/250/250" alt=""/>
-          </div>
-          <div class="col-lg-6 col-md-6 col-xs-6">
-            <img class="img-responsive" src="https://placekitten.com/g/250/250" alt=""/>
-          </div>
-        </div>
 
+          <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+              <div class="productBG">
+                <img class="img-responsive" src="https://placekitten.com/g/400/400" alt="">
+                <p>Price: $10,000</p>
+                <button id="addtocart" name="addtocart" class="btn">Add to cart</button>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+              <div class="productBG">
+                <img class="img-responsive" src="https://placekitten.com/g/400/400" alt="">
+                <p>Price: $10,000</p>
+                <button id="addtocart" name="addtocart" class="btn">Add to cart</button>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+              <div class="productBG">
+                <img class="img-responsive" src="https://placekitten.com/g/400/400" alt="">
+                <p>Price: $10,000</p>
+                <button id="addtocart" name="addtocart" class="btn">Add to cart</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
       </div>
-    </div>
+      <!-- CONTENT END -->
+
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
