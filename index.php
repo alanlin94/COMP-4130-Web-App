@@ -44,20 +44,30 @@
          </div>
     </div>
 
+
+
     <div class="content">
       <div class="container-fluid">
         <div class="row">
-          <div class="col-md-3">
-            <img src="https://placekitten.com/g/250/250" alt="">
+          <div class="row">
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <img class="heroIMG" src="img/heroimg.png" alt="">
           </div>
-          <div class="col-md-3">
-            <img src="https://placekitten.com/g/250/250" alt="">
+        </div>
+          <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+            <div class="productBG">
+            <img src="https://placekitten.com/g/511/400" alt="">
           </div>
-          <div class="col-md-3">
-            <img src="https://placekitten.com/g/250/250" alt="">
           </div>
-          <div class="col-md-3">
-            <img src="https://placekitten.com/g/250/250" alt="">
+          <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+            <div class="productBG">
+            <img src="https://placekitten.com/g/511/400" alt="">
+          </div>
+          </div>
+          <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+            <div class="productBG">
+            <img src="https://placekitten.com/g/511/400" alt="">
+          </div>
           </div>
         </div>
       </div>
