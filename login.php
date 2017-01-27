@@ -48,36 +48,39 @@
     <div class="content">
       <div class="container-fluid">
 
-        <div class="row mg">
-          <div class="col-lg-6 col-md-6 col-xs-6">
-            <img class="img-responsive" src="https://placekitten.com/g/250/250" alt=""/>
-          </div>
-          <div class="col-lg-6 col-md-6 col-xs-6">
-            <img class="img-responsive" src="https://placekitten.com/g/250/250" alt=""/>
-          </div>
-          <div class="col-lg-6 col-md-6 col-xs-6">
-            <img class="img-responsive" src="https://placekitten.com/g/250/250" alt=""/>
-          </div>
-          <div class="col-lg-6 col-md-6 col-xs-6">
-            <img class="img-responsive" src="https://placekitten.com/g/250/250" alt=""/>
-          </div>
-        </div>
-
         <div class="row">
-          <div class="col-lg-6 col-md-6 col-xs-6">
-            <img class="img-responsive" src="https://placekitten.com/g/250/250" alt=""/>
-          </div>
-          <div class="col-lg-6 col-md-6 col-xs-6">
-            <img class="img-responsive" src="https://placekitten.com/g/250/250" alt=""/>
-          </div>
-          <div class="col-lg-6 col-md-6 col-xs-6">
-            <img class="img-responsive" src="https://placekitten.com/g/250/250" alt=""/>
-          </div>
-          <div class="col-lg-6 col-md-6 col-xs-6">
-            <img class="img-responsive" src="https://placekitten.com/g/250/250" alt=""/>
-          </div>
-        </div>
+          <h1>Login</h1>
+          <form class="form-horizontal">
+            <fieldset>
 
+            <!-- Username input-->
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="username">Username</label>
+              <div class="col-md-4">
+              <input id="username" name="username" type="text" placeholder="Username" class="form-control input-md" required="">
+              </div>
+            </div>
+
+            <!-- Password input-->
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="password">Password</label>
+              <div class="col-md-4">
+                <input id="password" name="password" type="password" placeholder="Password" class="form-control input-md" required="">
+              </div>
+            </div>
+
+            <!-- Button -->
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="login">Login</label>
+              <div class="col-md-4">
+                <button id="login" name="login" class="btn btn-primary">Login</button>
+              </div>
+            </div>
+
+            </fieldset>
+            </form>
+        </div>
+        
       </div>
     </div>
 
