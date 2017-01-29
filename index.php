@@ -29,7 +29,7 @@
                       <a href="index.php">Work</a>
                     </li>
                      <li>
-                      <a href="#">Profile</a>
+                      <a href="dashboard/home.php">Profile</a>
                     </li>
                     <li>
                       <a href="#">Cart</a>
