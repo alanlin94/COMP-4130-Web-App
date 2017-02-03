@@ -44,139 +44,141 @@
          </div>
     </div>
 
-    <div class="container">
-    	<div class="row">
-    		<form class="form-horizontal">
-    <fieldset>
+    <div class="content">
+      <div class="container-fluid">
+      	<div class="row">
+      		<form class="form-horizontal">
+      <fieldset>
 
-    <!-- Form Name -->
-    <legend>Form Name</legend>
+      <!-- Form Name -->
+      <legend>Form Name</legend>
 
-    <!-- Text input-->
-    <div class="form-group">
-      <label class="col-md-4 control-label" for="textinput">Company</label>
-      <div class="col-md-5">
-      <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+      <!-- Text input-->
+      <div class="form-group">
+        <label class="col-md-4 control-label" for="textinput">Company</label>
+        <div class="col-md-12">
+        <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
 
+        </div>
       </div>
-    </div>
 
-    <!-- Text input-->
-    <div class="form-group">
-      <label class="col-md-4 control-label" for="textinput">First Name</label>
-      <div class="col-md-5">
-      <input id="textinput" name="textinput" type="text" placeholder="John" class="form-control input-md">
+      <!-- Text input-->
+      <div class="form-group">
+        <label class="col-md-4 control-label" for="textinput">First Name</label>
+        <div class="col-md-12">
+        <input id="textinput" name="textinput" type="text" placeholder="John" class="form-control input-md">
 
+        </div>
       </div>
-    </div>
 
-    <!-- Text input-->
-    <div class="form-group">
-      <label class="col-md-4 control-label" for="textinput">Middle Initial</label>
-      <div class="col-md-2">
-      <input id="textinput" name="textinput" type="text" placeholder="M." class="form-control input-md">
+      <!-- Text input-->
+      <div class="form-group">
+        <label class="col-md-4 control-label" for="textinput">Middle Initial</label>
+        <div class="col-md-12">
+        <input id="textinput" name="textinput" type="text" placeholder="M." class="form-control input-md">
 
+        </div>
       </div>
-    </div>
 
-    <!-- Text input-->
-    <div class="form-group">
-      <label class="col-md-4 control-label" for="textinput">Last Name</label>
-      <div class="col-md-5">
-      <input id="textinput" name="textinput" type="text" placeholder="Smith" class="form-control input-md">
+      <!-- Text input-->
+      <div class="form-group">
+        <label class="col-md-4 control-label" for="textinput">Last Name</label>
+        <div class="col-md-12">
+        <input id="textinput" name="textinput" type="text" placeholder="Smith" class="form-control input-md">
 
+        </div>
       </div>
-    </div>
 
-    <!-- Text input-->
-    <div class="form-group">
-      <label class="col-md-4 control-label" for="textinput">Email</label>
-      <div class="col-md-5">
-      <input id="textinput" name="textinput" type="text" placeholder="example@example.com" class="form-control input-md">
+      <!-- Text input-->
+      <div class="form-group">
+        <label class="col-md-4 control-label" for="textinput">Email</label>
+        <div class="col-md-12">
+        <input id="textinput" name="textinput" type="text" placeholder="example@example.com" class="form-control input-md">
 
+        </div>
       </div>
-    </div>
 
-    <!-- Text input-->
-    <div class="form-group">
-      <label class="col-md-4 control-label" for="textinput">Phone</label>
-      <div class="col-md-4">
-      <input id="textinput" name="textinput" type="text" placeholder="(555) 555-5555" class="form-control input-md">
+      <!-- Text input-->
+      <div class="form-group">
+        <label class="col-md-4 control-label" for="textinput">Phone</label>
+        <div class="col-md-12">
+        <input id="textinput" name="textinput" type="text" placeholder="(555) 555-5555" class="form-control input-md">
 
+        </div>
       </div>
-    </div>
 
-    <!-- Text input-->
-    <div class="form-group">
-      <label class="col-md-4 control-label" for="textinput">Work Phone</label>
-      <div class="col-md-4">
-      <input id="textinput" name="textinput" type="text" placeholder="(555) 555-5555" class="form-control input-md">
+      <!-- Text input-->
+      <div class="form-group">
+        <label class="col-md-4 control-label" for="textinput">Work Phone</label>
+        <div class="col-md-12">
+        <input id="textinput" name="textinput" type="text" placeholder="(555) 555-5555" class="form-control input-md">
 
+        </div>
       </div>
-    </div>
 
-    <!-- Text input-->
-    <div class="form-group">
-      <label class="col-md-4 control-label" for="textinput">Address</label>
-      <div class="col-md-5">
-      <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+      <!-- Text input-->
+      <div class="form-group">
+        <label class="col-md-4 control-label" for="textinput">Address</label>
+        <div class="col-md-12">
+        <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
 
+        </div>
       </div>
-    </div>
 
-    <!-- Text input-->
-    <div class="form-group">
-      <label class="col-md-4 control-label" for="textinput"></label>
-      <div class="col-md-4">
-      <input id="textinput" name="textinput" type="text" placeholder="Apt, Suite, etc" class="form-control input-md">
+      <!-- Text input-->
+      <div class="form-group">
+        <label class="col-md-4 control-label" for="textinput"></label>
+        <div class="col-md-12">
+        <input id="textinput" name="textinput" type="text" placeholder="Apt, Suite, etc" class="form-control input-md">
 
+        </div>
       </div>
-    </div>
 
-    <!-- Text input-->
-    <div class="form-group">
-      <label class="col-md-4 control-label" for="textinput">Postal Code</label>
-      <div class="col-md-4">
-      <input id="textinput" name="textinput" type="text" placeholder="Start Typing...." class="form-control input-md">
+      <!-- Text input-->
+      <div class="form-group">
+        <label class="col-md-4 control-label" for="textinput">Postal Code</label>
+        <div class="col-md-12">
+        <input id="textinput" name="textinput" type="text" placeholder="Start Typing...." class="form-control input-md">
 
+        </div>
       </div>
-    </div>
 
-    <!-- Text input-->
-    <div class="form-group">
-      <label class="col-md-4 control-label" for="textinput">City</label>
-      <div class="col-md-5">
-      <input id="textinput" name="textinput" type="text" placeholder="placeholder" class="form-control input-md">
+      <!-- Text input-->
+      <div class="form-group">
+        <label class="col-md-4 control-label" for="textinput">City</label>
+        <div class="col-md-12">
+        <input id="textinput" name="textinput" type="text" placeholder="placeholder" class="form-control input-md">
 
+        </div>
       </div>
-    </div>
 
-    <!-- Select Basic -->
-    <div class="form-group">
-      <label class="col-md-4 control-label" for="selectbasic">State</label>
-      <div class="col-md-5">
-        <select id="selectbasic" name="selectbasic" class="form-control">
-          <option value="1">Option one</option>
-          <option value="2">Option two</option>
-        </select>
+      <!-- Select Basic -->
+      <div class="form-group">
+        <label class="col-md-4 control-label" for="selectbasic">State</label>
+        <div class="col-md-12">
+          <select id="selectbasic" name="selectbasic" class="form-control">
+            <option value="1">Option one</option>
+            <option value="2">Option two</option>
+          </select>
+        </div>
       </div>
-    </div>
 
-    <!-- Select Basic -->
-    <div class="form-group">
-      <label class="col-md-4 control-label" for="selectbasic">Country</label>
-      <div class="col-md-5">
-        <select id="selectbasic" name="selectbasic" class="form-control">
-          <option value="1">Option one</option>
-          <option value="2">Option two</option>
-        </select>
+      <!-- Select Basic -->
+      <div class="form-group">
+        <label class="col-md-4 control-label" for="selectbasic">Country</label>
+        <div class="col-md-12">
+          <select id="selectbasic" name="selectbasic" class="form-control">
+            <option value="1">Option one</option>
+            <option value="2">Option two</option>
+          </select>
+        </div>
       </div>
-    </div>
 
-    </fieldset>
-    </form>
-    	</div>
-      <button type="button" href="cart.php"></button>
+      </fieldset>
+      </form>
+      	</div>
+        <button type="button" href="cart.php"></button>
+      </div>
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>

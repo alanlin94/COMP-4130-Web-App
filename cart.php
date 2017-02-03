@@ -44,6 +44,7 @@
          </div>
     </div>
 
+    <div class="content">
     <div class="container">
     	<div class="row">
     		<div class="col-xs-8">
@@ -124,9 +125,11 @@
     							<h4 class="text-right">Total <strong>$50.00</strong></h4>
     						</div>
     						<div class="col-xs-3">
-    							<button type="button" class="btn btn-success btn-block">
+                  <a href="contact.php">
+                  <button type="button" class="btn btn-success btn-block">
     								Checkout
     							</button>
+                </a>
     						</div>
     					</div>
     				</div>
@@ -134,6 +137,7 @@
     		</div>
     	</div>
     </div>
+  </div>
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
