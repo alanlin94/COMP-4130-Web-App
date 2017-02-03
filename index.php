@@ -32,7 +32,7 @@
                       <a href="dashboard/home.php">Profile</a>
                     </li>
                     <li>
-                      <a href="#">Cart</a>
+                      <a href="cart.php">Cart</a>
                      </li>
                      <li>
                       <a href="login.php">Login</a>
