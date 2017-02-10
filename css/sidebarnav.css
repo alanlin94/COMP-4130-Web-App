@@ -29,10 +29,10 @@
   line-height: 65px;
   cursor: pointer;
 }
-.nav-side-menu ul .active,
+/*.nav-side-menu ul .active,
 .nav-side-menu li .active {
   border-left: 4px solid black;
-}
+}*/
 .nav-side-menu li {
   padding-left: 0px;
   border-bottom: 1px solid black;

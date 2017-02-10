@@ -73,15 +73,6 @@
 
       <!-- Text input-->
       <div class="form-group">
-        <label class="col-md-4 control-label" for="textinput">Middle Initial</label>
-        <div class="col-md-12">
-        <input id="textinput" name="textinput" type="text" placeholder="M." class="form-control input-md">
-
-        </div>
-      </div>
-
-      <!-- Text input-->
-      <div class="form-group">
         <label class="col-md-4 control-label" for="textinput">Last Name</label>
         <div class="col-md-12">
         <input id="textinput" name="textinput" type="text" placeholder="Smith" class="form-control input-md">
