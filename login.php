@@ -10,4 +10,9 @@
   catch (Exception $e) {
       echo $e;
   }
+
+    echo $_POST["password"];
+    echo "</br>";
+    echo md5("password". "113lda9!23");
+
 ?>

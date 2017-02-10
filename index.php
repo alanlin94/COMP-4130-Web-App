@@ -3,11 +3,12 @@
 
   $index = new PHPTAL('index.xhtml');
   $index->title = "Björn Sture Store | Home";
-  
+
   try {
       echo $index->execute();
   }
   catch (Exception $e) {
       echo $e;
   }
+
 ?>
