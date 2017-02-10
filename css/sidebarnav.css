@@ -1,3 +1,6 @@
+a {
+  text-decoration: none;
+}
 .nav-side-menu {
   overflow: hidden;
   font-size: 20px;
@@ -37,8 +40,7 @@
   padding-left: 0px;
   border-bottom: 1px solid black;
 }
-.nav-side-menu li a {
-  text-decoration: none;
+.nav-side-menu ul span {
   color: #23282e;
   padding-left: 25px;
 }
@@ -46,6 +48,9 @@
 /*on hover*/
 .nav-side-menu li:hover {
   border-left: 4px solid black;
+}
+.nav-side-menu a:hover {
+  text-decoration: none;
 }
 @media (max-width: 768px) {
   .nav-side-menu {
