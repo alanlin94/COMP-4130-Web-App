@@ -23,4 +23,4 @@ CREATE TABLE IF NOT EXISTS `CART` (
   PRIMARY KEY  (`cart_id`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
---INSERT INTO `PRODUCTS` VALUES(1, 'art.png', 'art', 'Art by Artist', 200);
+INSERT INTO `PRODUCTS` VALUES(1, 'art.png', 'art', 'Art by Artist', 200);
