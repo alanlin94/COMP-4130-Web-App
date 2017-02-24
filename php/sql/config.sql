@@ -10,6 +10,8 @@ CREATE TABLE IF NOT EXISTS PRODUCTS (
 
 CREATE TABLE IF NOT EXISTS USERS (
   users_id int(10) NOT NULL auto_increment,
+  firstname varchar(32) collate utf8_unicode_ci NOT NULL,
+  lastname varchar(32) collate utf8_unicode_ci NOT NULL,
   username varchar(32) collate utf8_unicode_ci NOT NULL,
   email varchar(64) collate utf8_unicode_ci NOT NULL,
   password varchar(64) collate utf8_unicode_ci NOT NULL,
