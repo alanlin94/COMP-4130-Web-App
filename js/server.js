@@ -4,6 +4,7 @@ $(document).ready(function(){
     var passwordIn = document.getElementById("password");
     var registerBut = document.getElementById("register");
 
+
     registerBut.onclick = function(ev){
         $.ajax({
             url:"php/register.php",
@@ -17,7 +18,7 @@ $(document).ready(function(){
                 console.log(resp);
             }
         });
-    }
+    };
 
 
 });
