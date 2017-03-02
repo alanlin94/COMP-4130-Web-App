@@ -6,7 +6,7 @@ class database {
   private $dbname = "Bjorn";
   private $dbhost = "localhost";
   private $dbuser = "root";
-  private $dbpassword = "";
+  private $dbpassword = "root";
   private $conn;
   private static $_instance;
 
