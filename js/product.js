@@ -6,7 +6,7 @@ $(document).ready(function(){
           url:"php/cart.php",
           type:"post",
           data:{
-              product:"amorHomo",
+              username:$('#homo').attr('alt'),
               quantity:1,
           },
           success:function(resp){

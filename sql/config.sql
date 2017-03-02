@@ -21,6 +21,7 @@ CREATE TABLE IF NOT EXISTS USERS (
 CREATE TABLE IF NOT EXISTS CART (
   cart_id int(10) NOT NULL auto_increment,
   username varchar(64) collate utf8_unicode_ci NOT NULL,
+  quantity int(6) NOT NULL,
   status varchar(64) collate utf8_unicode_ci NOT NULL,
   PRIMARY KEY  (cart_id)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
