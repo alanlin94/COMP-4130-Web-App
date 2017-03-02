@@ -1,7 +1,7 @@
 <? php
 include_once ("build.php");
 
-$sql = "INSERT INTO products (name, description, price) VALUES('$username', '$email', '$password');";
+$sql = "INSERT INTO CARTPRODUCT (name, quantity) VALUES('$name', '$quantity');";
 $conn->exec($sql);
 
 
