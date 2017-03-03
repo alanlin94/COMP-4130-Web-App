@@ -1,23 +1,21 @@
 <?php
 include_once ("build.php");
 
-
 $quantity = "";
-$username = "";
+$name = "";
 
-
-if (isset($_POST["username"]) && !empty($_POST["username"])) {
-	$username = $_POST["username"];
+if (isset($_POST["name"]) && !empty($_POST["name"])) {
+	$username = $_POST["name"];
 }
 
 if (isset($_POST["quantity"]) && !empty($_POST["quantity"])) {
 	$quantity = $_POST["quantity"];
 }
 
-if (empty($username) || empty($quantity)) {
+if (empty($name) || empty($quantity)) {
 	echo "One or more fields was not filled out.";
 } else {
-  $sql = "INSERT INTO CART (username, quantity) VALUES('$username', '$quantity');";
+  $sql = "INSERT INTO CART (name, quantity) VALUES('$name', '$quantity');";
   $conn->exec($sql);
 }
 

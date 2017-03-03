@@ -1,3 +1,14 @@
+<?php
+
+require_once('php/build.php');
+
+$sql = 'SELECT * FROM PRODUCTS';
+$q = $conn->prepare($sql);
+$q->execute();
+$result = $q->fetchAll();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -90,14 +101,32 @@
               <table class="table table-responsive table-hover table-striped">
                   <thead>
                       <tr>
-                          <th>#</th>
-                          <th>Title</th>
+                          <th>Image</th>
+                          <th>Name</th>
+                          <th>Stock</th>
                           <th>Price</th>
-                          <th>Quantity</th>
-                          <th>Created</th>
                       </tr>
                   </thead>
-                  <tbody id="viewproduct"> <!-- where view comes in -->
+                  <tbody> 
+                    <?php
+                      foreach( $result as $row ) {
+                          echo '
+                          <tr>
+                            <td>
+                              <img src="../img/' . $row['img'] . '" width="100px" />
+                            </td>
+                            <td>'
+                            . $row['name'] .
+                            '</td>
+                            <td>'
+                            . $row['quantity'] .
+                            '</td>
+                            <td>
+                            $'. $row['price'] .
+                            '</td>
+                          </tr>';
+                      }
+                    ?>
                   </tbody>
               </table>
           </div>
