@@ -73,7 +73,7 @@ $result = $q->fetchAll();
             <div class="col-sm-12">
                 <div id="productform" class="first">
                     <div class="form-group">
-                        <input type="text" class="form-control" name="ptitle" id="ptitle" placeholder="Name" />
+                        <input type="text" class="form-control" name="name" id="name" placeholder="Name" />
                     </div>
                     <div class="form-group">
                         <input type="number" class="form-control" id="price" name="price" placeholder="Price" />
@@ -81,17 +81,15 @@ $result = $q->fetchAll();
                     <div class="form-group">
                         <input type="number" min="1" max="99" class="form-control" id="quantity" name="quantity" placeholder="Quantity" />
                     </div>
-                    </div>
-                    <div class="form-group">
-                        <textarea type="text" class="form-control" id="description" name="description" placeholder="Product Description"></textarea>
-                    </div>
+                </div>
+
                     <div class="form-group">
                         <input type="file" class="form-control-file" id="image" name="image" aria-describedby="fileHelp" />
                         <small id="info" class="form-text text-muted">Select the featured image you want for your product.</small>
                         <div id="upload-demo"></div>
                     </div>
                     <div class="form-group">
-                        <button type="submit" class="btn">Create Product</button>
+                        <button type="submit" class="btn" id="newProductAdmin">Create Product</button>
                     </div>
                   </div>
           </div>
@@ -107,7 +105,7 @@ $result = $q->fetchAll();
                           <th>Price</th>
                       </tr>
                   </thead>
-                  <tbody> 
+                  <tbody>
                     <?php
                       foreach( $result as $row ) {
                           echo '
@@ -139,5 +137,6 @@ $result = $q->fetchAll();
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="../js/script.js"></script>
+    <script src="../js/adminProduct.js"></script>
   </body>
 </html>

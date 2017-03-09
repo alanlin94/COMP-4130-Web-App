@@ -27,7 +27,9 @@ class database {
         session_start();
       }
 
+
       $sql = file_get_contents("../sql/config.sql");
+      //die($sql);
       $this->conn->exec($sql);
 
     } catch (Exception $e) {

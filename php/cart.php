@@ -5,7 +5,7 @@ $quantity = "";
 $name = "";
 
 if (isset($_POST["name"]) && !empty($_POST["name"])) {
-	$username = $_POST["name"];
+	$name = $_POST["name"];
 }
 
 if (isset($_POST["quantity"]) && !empty($_POST["quantity"])) {

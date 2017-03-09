@@ -34,7 +34,7 @@ CREATE TABLE IF NOT EXISTS CARTPRODUCT (
   PRIMARY KEY (cart_id, product_id)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
-INSERT INTO PRODUCTS VALUES(1, 'amorHomo.jpg', 'amorhomo', 25, 20);
+INSERT INTO PRODUCTS VALUES(1, 'amor_homosexual.jpg', 'amorhomo', 25, 20);
 INSERT INTO PRODUCTS VALUES(2, 'dejected.jpg', 'dejected', 25, 20);
 INSERT INTO PRODUCTS VALUES(3, 'jungle_rain.jpg', 'jungle_rain', 25, 20);
 INSERT INTO PRODUCTS VALUES(4, 'modern_destruction.jpg', 'modern_destruction', 25, 20);
