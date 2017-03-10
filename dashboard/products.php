@@ -105,7 +105,7 @@ $result = $q->fetchAll();
                     <?php
                       foreach( $result as $row ) {
                           echo '
-                          <tr>
+                          <tr id="'. $row['product_id'] .'" class="delMe">
                             <td>
                               <img src=" ' . $row['img'] . ' " width="100px" />
                             </td>
@@ -117,7 +117,9 @@ $result = $q->fetchAll();
                             '</td>
                             <td>
                             $'. $row['price'] .
-                            '</td>
+                            '
+                            <button id="'. $row['product_id'] .'"class="deleteBut">DELETE</button>
+                            </td>
                           </tr>';
                       }
                     ?>
@@ -134,5 +136,6 @@ $result = $q->fetchAll();
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="../js/script.js"></script>
     <script src="../js/adminProduct.js"></script>
+    <script src="../js/deleteProduct.js"></script>
   </body>
 </html>
