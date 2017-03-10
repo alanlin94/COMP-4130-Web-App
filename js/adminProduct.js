@@ -1,17 +1,23 @@
 $(document).ready(function(){
-  $("#newProductAdmin").click(function(ev){
-    console.log("k");
+  var nameIn = document.getElementById("name");
+  var priceIn = document.getElementById("price");
+  var quantityIn = document.getElementById("quantity");
+  var imageIn = document.getElementById("image");
+  var addBut = document.getElementById("newProductAdmin");
+
+  addBut.onclick = function(ev){
       $.ajax({
           url:"php/createProduct.php",
           type:"post",
           data:{
-              name: $("#name").val(),
-              quantity: $("#quantity").val(),
-              price: $("#price").val()
+            img: imageIn.value,
+            name: nameIn.value,
+            quantity: quantityIn.value,
+            price: priceIn.value
           },
           success:function(resp){
               console.log(resp);
           }
       });
-    });
+    };
 });

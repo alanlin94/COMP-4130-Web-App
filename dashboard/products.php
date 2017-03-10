@@ -1,6 +1,6 @@
 <?php
 
-require_once('php/build.php');
+include_once ("../php/createProduct.php");
 
 $sql = 'SELECT * FROM PRODUCTS';
 $q = $conn->prepare($sql);
@@ -29,7 +29,6 @@ $result = $q->fetchAll();
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
   <![endif]-->
 </head>
-
 
   <body>
 
@@ -81,17 +80,14 @@ $result = $q->fetchAll();
                     <div class="form-group">
                         <input type="number" min="1" max="99" class="form-control" id="quantity" name="quantity" placeholder="Quantity" />
                     </div>
-                </div>
-
                     <div class="form-group">
-                        <input type="file" class="form-control-file" id="image" name="image" aria-describedby="fileHelp" />
-                        <small id="info" class="form-text text-muted">Select the featured image you want for your product.</small>
-                        <div id="upload-demo"></div>
+                        <input type="text" class="form-control" id="image" name="img" placeholder="Image URL" />
                     </div>
+                  </div>
                     <div class="form-group">
                         <button type="submit" class="btn" id="newProductAdmin">Create Product</button>
                     </div>
-                  </div>
+              </div>
           </div>
 
           <div class="col-sm-12">
@@ -111,7 +107,7 @@ $result = $q->fetchAll();
                           echo '
                           <tr>
                             <td>
-                              <img src="../img/' . $row['img'] . '" width="100px" />
+                              <img src=" ' . $row['img'] . ' " width="100px" />
                             </td>
                             <td>'
                             . $row['name'] .
