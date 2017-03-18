@@ -1,10 +1,12 @@
 <?php
-    include_once ('../php/users.php');
-    $user = new User();
-    if ($user->adminlogin() === false) {
-        header("Location: ../index.php");
-    	  return;
-    }
+
+include_once ("../php/createProduct.php");
+
+$sql = 'SELECT * FROM USERS';
+$q = $conn->prepare($sql);
+$q->execute();
+$result = $q->fetchAll();
+
 ?>
 
 <!DOCTYPE html>
@@ -51,7 +53,7 @@
                        <span>Profile</span>
                      </li>
                    </a>
-                   <a href="../php/logout.php">
+                   <a href="../index.php">
                      <li>
                        <span>Logout</span>
                     </li>
@@ -63,20 +65,29 @@
     <!-- CONTENT -->
     <div class="content">
       <div class="container-fluid">
-          <h1>Admin Dashboard<br /><small>Welcome guy <!-- PHP SESSION HERE --></small></h1>
-          <div class="row">
-              <h3>Products</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nec metus in nunc congue suscipit.</p>
-            <div class="col-sm-4">
-              <img class="img-responsive" src="https://placekitten.com/g/400/400" alt="" />
-            </div>
-            <div class="col-sm-4">
-              <img class="img-responsive" src="https://placekitten.com/g/400/400" alt="" />
-            </div>
-            <div class="col-sm-4">
-              <img class="img-responsive" src="https://placekitten.com/g/400/400" alt="" />
-            </div>
-          </div>
+        <?php
+          foreach( $result as $row ) {
+              echo '
+              <tr id="adminInfo">
+                <td>
+                  <p>' . $row['firstname'] . ' <p/>
+                </td>
+                <td>
+                   <p>' . $row['lastname'] . ' <p/>
+                </td>
+                <td>
+                   <p>' . $row['username'] . ' <p/>
+                </td>
+                <td>
+                  <p>' . $row['email'] . ' <p/>
+                </td>
+                <td>
+                  <p>' . $row['password'] . ' <p/>
+                </td>
+
+              </tr>';
+          }
+        ?>
       </div>
     </div>
       <!-- CONTENT END -->
