@@ -5,6 +5,9 @@
   $index = new PHPTAL('login.xhtml');
   $index->title = "Björn Sture Store | Login";
 
+  $user = new User();
+  $index->notLoggedIn = $user->loggedIn();
+
   try {
       echo $index->execute();
   }

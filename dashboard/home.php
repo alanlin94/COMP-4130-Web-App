@@ -1,3 +1,12 @@
+<?php
+    include_once ('../php/users.php');
+    $user = new User();
+    if ($user->adminlogin() === false) {
+        header("Location: ../index.php");
+    	  return;
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 

@@ -8,7 +8,7 @@
                   <span>Work</span>
                 </li>
               </a>
-              <a href="dashboard/home.php">
+              <a tal:condition="notLoggedIn" href="dashboard/home.php">
                 <li>
                   <span>Admin</span>
                 </li>
@@ -18,12 +18,17 @@
                   <span>Cart</span>
                  </li>
                </a>
-              <a href="login.php">
+               <a tal:condition="notLoggedIn" href="php/logout.php">
+                 <li>
+                   <span>Logout</span>
+                 </li>
+               </a>
+              <a tal:condition="not: notLoggedIn" href="login.php">
                 <li>
                   <span>Login</span>
                 </li>
               </a>
-              <a href="register.php">
+              <a tal:condition="not: notLoggedIn" href="register.php">
                 <li>
                   <span>Register</span>
                </li>

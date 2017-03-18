@@ -52,7 +52,7 @@ $result = $q->fetchAll();
                        <span>Profile</span>
                      </li>
                    </a>
-                   <a href="../index.php">
+                   <a href="../php/logout.php">
                      <li>
                        <span>Logout</span>
                     </li>

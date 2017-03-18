@@ -44,6 +44,7 @@ class database {
         username varchar(32) collate utf8_unicode_ci NOT NULL,
         email varchar(64) collate utf8_unicode_ci NOT NULL,
         password varchar(64) collate utf8_unicode_ci NOT NULL,
+        user_lvl int(2) COLLATE utf8_unicode_ci NOT NULL,
         PRIMARY KEY  (users_id)
       ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci";
 
