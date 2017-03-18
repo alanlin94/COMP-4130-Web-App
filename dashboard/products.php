@@ -47,7 +47,7 @@ $result = $q->fetchAll();
                        <span>Products</span>
                     </li>
                    </a>
-                    <a href="#">
+                    <a href="profile.php">
                       <li>
                        <span>Profile</span>
                      </li>
@@ -70,7 +70,7 @@ $result = $q->fetchAll();
             <h3>Products</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nec metus in nunc congue suscipit.</p>
             <div class="col-sm-12">
-                <div id="productform" class="first">
+                <div id="productform" class="first productNew">
                     <div class="form-group">
                         <input type="text" class="form-control" name="name" id="name" placeholder="Name" />
                     </div>
@@ -84,13 +84,13 @@ $result = $q->fetchAll();
                         <input type="text" class="form-control" id="image" name="img" placeholder="Image URL" />
                     </div>
                   </div>
-                    <div class="form-group">
+                    <div class="form-group productNew">
                         <button type="submit" class="btn" id="newProductAdmin">Create Product</button>
                     </div>
               </div>
           </div>
 
-          <div class="col-sm-12">
+          <div class="col-sm-12 productsAdmin">
             <h4>Existing products</h4>
               <table class="table table-responsive table-hover table-striped">
                   <thead>
@@ -119,12 +119,37 @@ $result = $q->fetchAll();
                             $'. $row['price'] .
                             '
                             <button id="'. $row['product_id'] .'"class="deleteBut">DELETE</button>
+                            <button id="'. $row['product_id'] .'"class="updateBut">EDIT</button>
                             </td>
                           </tr>';
                       }
                     ?>
                   </tbody>
               </table>
+          </div>
+          <div class="row" id="editproduct" >
+
+            <h3>Edit</h3>
+            <p>Change your items here</p>
+            <div class="col-sm-12">
+                <div class="first">
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="name" id="nameEdit" placeholder="Name" />
+                    </div>
+                    <div class="form-group">
+                        <input type="number" class="form-control" id="priceEdit" name="price" placeholder="Price" />
+                    </div>
+                    <div class="form-group">
+                        <input type="number" min="1" max="99" class="form-control" id="quantityEdit" name="quantity" placeholder="Quantity" />
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="imageEdit" name="img" placeholder="Image URL" />
+                    </div>
+                  </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn" id="newEditAdmin">Edit Product</button>
+                    </div>
+              </div>
           </div>
 
       </div>
@@ -136,6 +161,7 @@ $result = $q->fetchAll();
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="../js/script.js"></script>
     <script src="../js/adminProduct.js"></script>
+    <script src="../js/updateProduct.js"></script>
     <script src="../js/deleteProduct.js"></script>
   </body>
 </html>
