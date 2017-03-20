@@ -134,16 +134,16 @@ $result = $q->fetchAll();
             <div class="col-sm-12">
                 <div class="first">
                     <div class="form-group">
-                        <input type="text" class="form-control" name="name" id="nameEdit" placeholder="Name" />
+                        <input type="text" class="form-control" name="nameEdit" id="nameEdit" placeholder="Name" />
                     </div>
                     <div class="form-group">
-                        <input type="number" class="form-control" id="priceEdit" name="price" placeholder="Price" />
+                        <input type="number" class="form-control" id="priceEdit" name="priceEdit" placeholder="Price" />
                     </div>
                     <div class="form-group">
-                        <input type="number" min="1" max="99" class="form-control" id="quantityEdit" name="quantity" placeholder="Quantity" />
+                        <input type="number" min="1" max="99" class="form-control" id="quantityEdit" name="quantityEdit" placeholder="Quantity" />
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-control" id="imageEdit" name="img" placeholder="Image URL" />
+                        <input type="text" class="form-control" id="imageEdit" name="imgEdit" placeholder="Image URL" />
                     </div>
                   </div>
                     <div class="form-group">
