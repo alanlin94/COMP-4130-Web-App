@@ -18,7 +18,7 @@ class user {
       ));
       $row = $result->fetch();
 
-      if($_POST['username'] == $row['username'] && $_POST['password'] == $row['password']){
+      if($_POST['username'] == $row['username'] && password_verify($_POST['password'], $row['password'])){
         $_SESSION['user_id'] = $row['users_id'];
         return true;
       } else {

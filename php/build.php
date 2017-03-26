@@ -57,26 +57,26 @@ class database {
       ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci";
 
       $cartproduct = "CREATE TABLE IF NOT EXISTS CARTPRODUCT (
-        cart_id int(10) NOT NULL,
-        product_id int(10) NOT NULL,
+        cartproduct_id int(10) NOT NULL auto_increment,
+        cart_ref int(10) NOT NULL,
+        product_ref int(10) NOT NULL,
         quantity int(10) NOT NULL,
-        FOREIGN KEY (cart_id) REFERENCES CART(cart_id),
-        FOREIGN KEY (product_id) REFERENCES PRODUCT(product_id),
-        PRIMARY KEY (cart_id, product_id)
+        PRIMARY KEY (cartproduct_id),
+        FOREIGN KEY (cart_ref) REFERENCES CART(cart_id),
+        FOREIGN KEY (product_ref) REFERENCES PRODUCT(product_id)
       ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci";
 
-      $placeholders = "INSERT INTO PRODUCTS VALUES(1, 'amor_homosexual.jpg', 'amorhomo', 25, 20);
-      INSERT INTO PRODUCTS VALUES(2, 'dejected.jpg', 'dejected', 25, 20);
-      INSERT INTO PRODUCTS VALUES(3, 'jungle_rain.jpg', 'jungle_rain', 25, 20);
-      INSERT INTO PRODUCTS VALUES(4, 'modern_destruction.jpg', 'modern_destruction', 25, 20);
-      INSERT INTO PRODUCTS VALUES(5, 'murbella.jpg', 'murbella', 25, 20);
-      INSERT INTO PRODUCTS VALUES(6, 'river.jpg', 'river', 25, 20)";
+      $admin = "INSERT INTO USERS (firstname, lastname, username, email, password, user_lvl)
+        SELECT * FROM (SELECT 'John', 'Doe', 'demo', 'admin@bjorn.com', 'admin', 2) AS tmp
+        WHERE NOT EXISTS (
+            SELECT firstname FROM USERS WHERE firstname = 'John'
+        ) LIMIT 1;";
 
       $this->conn->exec($products);
       $this->conn->exec($users);
       $this->conn->exec($cart);
       $this->conn->exec($cartproduct);
-      //$this->conn->exec($placeholders);
+      $this->conn->exec($admin);
 
     } catch (Exception $e) {
       die("Connection failed: " . $e->getMessage());

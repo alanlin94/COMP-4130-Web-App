@@ -10,7 +10,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head metal:define-macro="head">
+<head>
   <title>Björn Sture Dashboard | Home</title>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -31,7 +31,7 @@
 
   <body>
 
-    <div class="nav-side-menu" metal:define-macro="sidenav">
+    <div class="nav-side-menu">
        <div class="brand"><a href="../index.php"><img src="../img/logo.svg" alt="" /></a></div>
        <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
            <div class="menu-list">
