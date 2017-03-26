@@ -2,7 +2,7 @@
   require_once('PHPTAL-1.3.0/PHPTAL.php');
   require_once('php/users.php');
 
-  $index = new PHPTAL('cart.xhtml');
+  $index = new PHPTAL('xhtml/cart.xhtml');
   $index->title = "Björn Sture Store | Cart";
 
   $user = new User();
