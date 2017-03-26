@@ -70,21 +70,20 @@ $result = $q->fetchAll();
               echo '
               <tr id="adminInfo">
                 <td>
-                  <p>' . $row['firstname'] . ' <p/>
+                  <p>First Name: ' . $row['firstname'] . ' <p/>
                 </td>
                 <td>
-                   <p>' . $row['lastname'] . ' <p/>
+                   <p>Last Name: ' . $row['lastname'] . ' <p/>
                 </td>
                 <td>
-                   <p>' . $row['username'] . ' <p/>
+                   <p>Username: ' . $row['username'] . ' <p/>
                 </td>
                 <td>
-                  <p>' . $row['email'] . ' <p/>
+                  <p>Email: ' . $row['email'] . ' <p/>
                 </td>
                 <td>
-                  <p>' . $row['password'] . ' <p/>
+                  <p>Password: ' . $row['password'] . ' <p/>
                 </td>
-
               </tr>';
           }
         ?>

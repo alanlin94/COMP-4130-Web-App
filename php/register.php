@@ -30,7 +30,7 @@ if (isset($_POST["password"]) && !empty($_POST["password"])) {
 }
 
 if (empty($username) || empty($email) || empty($password)) {
-	echo "One or more fields was not filled out.";
+	echo "Fill all fields.";
 }
 else {
     $hashed_pass = password_hash($password, PASSWORD_DEFAULT);

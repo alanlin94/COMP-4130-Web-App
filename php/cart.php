@@ -13,7 +13,7 @@ if (isset($_POST["quantity"]) && !empty($_POST["quantity"])) {
 }
 
 if (empty($name) || empty($quantity)) {
-	echo "One or more fields was not filled out.";
+	echo "Fill all fields.";
 } else {
   $sql = "INSERT INTO CART (name, quantity) VALUES('$name', '$quantity');";
   $conn->exec($sql);

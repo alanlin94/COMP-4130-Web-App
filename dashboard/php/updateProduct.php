@@ -1,5 +1,4 @@
 <?php
-/***KEEP THIS HERE FOR NOW***/
 /*
     DATABASE CONFIGURATION
  */
@@ -45,6 +44,7 @@ class database {
         username varchar(32) collate utf8_unicode_ci NOT NULL,
         email varchar(64) collate utf8_unicode_ci NOT NULL,
         password varchar(64) collate utf8_unicode_ci NOT NULL,
+        user_lvl int(2) COLLATE utf8_unicode_ci NOT NULL,
         PRIMARY KEY  (users_id)
       ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci";
 
@@ -57,26 +57,58 @@ class database {
       ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci";
 
       $cartproduct = "CREATE TABLE IF NOT EXISTS CARTPRODUCT (
-        cart_id int(10) NOT NULL,
-        product_id int(10) NOT NULL,
+        cartproduct_id int(10) NOT NULL auto_increment,
+        cart_ref int(10) NOT NULL,
+        product_ref int(10) NOT NULL,
         quantity int(10) NOT NULL,
-        FOREIGN KEY (cart_id) REFERENCES CART(cart_id),
-        FOREIGN KEY (product_id) REFERENCES PRODUCT(product_id),
-        PRIMARY KEY (cart_id, product_id)
+        PRIMARY KEY (cartproduct_id),
+        FOREIGN KEY (cart_ref) REFERENCES CART(cart_id),
+        FOREIGN KEY (product_ref) REFERENCES PRODUCT(product_id)
       ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci";
 
-      $placeholders = "INSERT INTO PRODUCTS VALUES(1, 'amor_homosexual.jpg', 'amorhomo', 25, 20);
-      INSERT INTO PRODUCTS VALUES(2, 'dejected.jpg', 'dejected', 25, 20);
-      INSERT INTO PRODUCTS VALUES(3, 'jungle_rain.jpg', 'jungle_rain', 25, 20);
-      INSERT INTO PRODUCTS VALUES(4, 'modern_destruction.jpg', 'modern_destruction', 25, 20);
-      INSERT INTO PRODUCTS VALUES(5, 'murbella.jpg', 'murbella', 25, 20);
-      INSERT INTO PRODUCTS VALUES(6, 'river.jpg', 'river', 25, 20)";
+      $admin = "INSERT INTO USERS (firstname, lastname, username, email, password, user_lvl)
+        SELECT * FROM (SELECT 'John', 'Doe', 'demo', 'admin@bjorn.com', 'admin', 2) AS tmp
+        WHERE NOT EXISTS (
+            SELECT firstname FROM USERS WHERE firstname = 'John'
+        ) LIMIT 1;";
+
+        $placeholders = "INSERT INTO PRODUCTS (img, name, quantity, price)
+          SELECT * FROM (SELECT 'amor_homosexual.jpg', 'amor', 20, 50) AS tmp
+          WHERE NOT EXISTS (
+              SELECT name FROM PRODUCTS WHERE name = 'amor'
+          ) LIMIT 1;
+          INSERT INTO PRODUCTS (img, name, quantity, price)
+            SELECT * FROM (SELECT 'dejected.jpg', 'dejected', 10, 50) AS tmp
+            WHERE NOT EXISTS (
+                SELECT name FROM PRODUCTS WHERE name = 'dejected'
+            ) LIMIT 1;
+            INSERT INTO PRODUCTS (img, name, quantity, price)
+              SELECT * FROM (SELECT 'jungle_rain.jpg', 'jungle', 20, 50) AS tmp
+              WHERE NOT EXISTS (
+                  SELECT name FROM PRODUCTS WHERE name = 'jungle'
+              ) LIMIT 1;
+              INSERT INTO PRODUCTS (img, name, quantity, price)
+                SELECT * FROM (SELECT 'modern_destruction.jpg', 'destruction', 20, 50) AS tmp
+                WHERE NOT EXISTS (
+                    SELECT name FROM PRODUCTS WHERE name = 'destruction'
+                ) LIMIT 1;
+                INSERT INTO PRODUCTS (img, name, quantity, price)
+                  SELECT * FROM (SELECT 'murbella.jpg', 'murbella', 20, 50) AS tmp
+                  WHERE NOT EXISTS (
+                      SELECT name FROM PRODUCTS WHERE name = 'murbella'
+                  ) LIMIT 1;
+                  INSERT INTO PRODUCTS (img, name, quantity, price)
+                    SELECT * FROM (SELECT 'river.jpg', 'river', 20, 50) AS tmp
+                    WHERE NOT EXISTS (
+                        SELECT name FROM PRODUCTS WHERE name = 'river'
+                    ) LIMIT 1;";
 
       $this->conn->exec($products);
       $this->conn->exec($users);
       $this->conn->exec($cart);
       $this->conn->exec($cartproduct);
-      //$this->conn->exec($placeholders);
+      $this->conn->exec($admin);
+      $this->conn->exec($placeholders);
 
     } catch (Exception $e) {
       die("Connection failed: " . $e->getMessage());
@@ -88,11 +120,11 @@ class database {
     return $this->conn;
   }
 }
-/***KEEP THIS HERE FOR NOW END***/
 
 $db = database::getInstance();
 $conn = $db->getConnection();
-//
+/***KEEP END***/
+
 $img = "";
 $name = "";
 $quantity = "";
@@ -114,10 +146,8 @@ if (isset($_POST["priceEdit"]) && !empty($_POST["priceEdit"])) {
 	$price = $_POST["priceEdit"];
 }
 
-//echo print_r($_POST["imgEdit"]);
-
 if (is_null($img) || is_null($name) || is_null($quantity) || is_null($price)) {
-	echo "One or more fields was not filled out.";
+	echo "Fill all fields.";
 } else {
   $product_id = $_POST["edit_id"];
 

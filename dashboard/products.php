@@ -64,11 +64,11 @@ $result = $q->fetchAll();
     <!-- CONTENT -->
     <div class="content">
       <div class="container-fluid">
-          <h1>Admin Dashboard<br /><small>Welcome guy <!-- PHP SESSION HERE --></small></h1>
+          <h1>Admin Dashboard<br /><small>Welcome</small></h1>
           <div class="row">
 
             <h3>Products</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nec metus in nunc congue suscipit.</p>
+            <p>Add, edit and delete products.</p>
             <div class="col-sm-12">
                 <div id="productform" class="first productNew">
                     <div class="form-group">
@@ -107,7 +107,7 @@ $result = $q->fetchAll();
                           echo '
                           <tr id="'. $row['product_id'] .'" class="delMe">
                             <td>
-                              <img src=" ' . $row['img'] . ' " width="100px" />
+                              <img src="../img/'.$row['img'].'" width="100px" />
                             </td>
                             <td>'
                             . $row['name'] .

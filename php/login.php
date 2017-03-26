@@ -12,7 +12,7 @@ if (isset($_POST["password"]) && !empty($_POST["password"])) {
 }
 
 if (empty($username) || empty($password)) {
-	echo "One or more fields was not filled out.";
+	echo "Fill all fields.";
 } else {
 	include_once('users.php');
 	$user = new user();

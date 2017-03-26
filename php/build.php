@@ -72,11 +72,43 @@ class database {
             SELECT firstname FROM USERS WHERE firstname = 'John'
         ) LIMIT 1;";
 
+        $placeholders = "INSERT INTO PRODUCTS (img, name, quantity, price)
+          SELECT * FROM (SELECT 'amor_homosexual.jpg', 'amor', 20, 50) AS tmp
+          WHERE NOT EXISTS (
+              SELECT name FROM PRODUCTS WHERE name = 'amor'
+          ) LIMIT 1;
+          INSERT INTO PRODUCTS (img, name, quantity, price)
+            SELECT * FROM (SELECT 'dejected.jpg', 'dejected', 10, 50) AS tmp
+            WHERE NOT EXISTS (
+                SELECT name FROM PRODUCTS WHERE name = 'dejected'
+            ) LIMIT 1;
+            INSERT INTO PRODUCTS (img, name, quantity, price)
+              SELECT * FROM (SELECT 'jungle_rain.jpg', 'jungle', 20, 50) AS tmp
+              WHERE NOT EXISTS (
+                  SELECT name FROM PRODUCTS WHERE name = 'jungle'
+              ) LIMIT 1;
+              INSERT INTO PRODUCTS (img, name, quantity, price)
+                SELECT * FROM (SELECT 'modern_destruction.jpg', 'destruction', 20, 50) AS tmp
+                WHERE NOT EXISTS (
+                    SELECT name FROM PRODUCTS WHERE name = 'destruction'
+                ) LIMIT 1;
+                INSERT INTO PRODUCTS (img, name, quantity, price)
+                  SELECT * FROM (SELECT 'murbella.jpg', 'murbella', 20, 50) AS tmp
+                  WHERE NOT EXISTS (
+                      SELECT name FROM PRODUCTS WHERE name = 'murbella'
+                  ) LIMIT 1;
+                  INSERT INTO PRODUCTS (img, name, quantity, price)
+                    SELECT * FROM (SELECT 'river.jpg', 'river', 20, 50) AS tmp
+                    WHERE NOT EXISTS (
+                        SELECT name FROM PRODUCTS WHERE name = 'river'
+                    ) LIMIT 1;";
+
       $this->conn->exec($products);
       $this->conn->exec($users);
       $this->conn->exec($cart);
       $this->conn->exec($cartproduct);
       $this->conn->exec($admin);
+      $this->conn->exec($placeholders);
 
     } catch (Exception $e) {
       die("Connection failed: " . $e->getMessage());
